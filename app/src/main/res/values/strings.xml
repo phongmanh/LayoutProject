@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LayoutProject</string>
+
+    <string name="splash_logo_text">ndt</string>
+    <string name="splash_slogan">Cho cuộc sống tốt đẹp hơn</string>
+    <string name="combo_list_message">CHÚNG TÔI MANG ĐIỀU TỐT ĐẸP ĐẾN CHO MỌI NGƯỜI</string>
+    <string name="combo_list_question">BẠN ĐÃ THAM GIA VỚI CHÚNG TÔI?</string>
+    <string name="combo_list_verify_text">XÁC THỰC ĐÓ LÀ BẠN</string>
+    <string name="normal_combo_title">Gói cơ bản</string>
+    <string name="text_wait_to_accept">CHỜ XÁC NHẬN</string>
+</resources>
