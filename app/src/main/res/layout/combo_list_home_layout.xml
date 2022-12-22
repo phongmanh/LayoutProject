@@ -5,6 +5,10 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.example.layoutproject.ComboListViewModel" />
+
         <import type="com.example.layoutproject.ComboListSdk.UIHelper" />
 
     </data>
@@ -21,6 +25,20 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
+        <TextView
+            android:id="@+id/txtUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:text="@{UIHelper.getQuestionDisplay(context)}"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            tools:text="NGUYỄN VĂN A" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardMessage"
             android:layout_width="match_parent"
@@ -34,24 +52,24 @@
             app:cardPreventCornerOverlap="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/toolbar">
+            app:layout_constraintTop_toBottomOf="@id/txtUserName">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background_combo_msg_card">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_combo_msg_card">
 
-            <TextView
-                android:layout_width="@dimen/_130sdp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_16sdp"
-                android:layout_marginBottom="@dimen/_14sdp"
-                android:text="@string/combo_list_message"
-                android:textColor="@color/text_brown"
-                android:textSize="@dimen/_17sdp" />
+                <TextView
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_14sdp"
+                    android:text="@string/combo_list_message"
+                    android:textColor="@color/text_brown"
+                    android:textSize="@dimen/_17sdp" />
 
-        </LinearLayout>
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -70,195 +88,16 @@
             tools:text="@string/combo_list_question" />
 
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardCombo1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+        <include
+            layout="@layout/combo_details_card_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_16sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:layout_marginEnd="@dimen/_16sdp"
-            app:cardBackgroundColor="@color/combo_list_card_background"
-            app:cardCornerRadius="@dimen/_8sdp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtQuestion">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="@dimen/_2sdp"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:id="@+id/txtNormalComboPeriod"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorPrimary"
-                    android:padding="@dimen/_5sdp"
-                    android:text="@string/normal_combo_title"
-                    android:textColor="@color/text_white"
-                    android:textSize="@dimen/_10sdp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:text="1 tháng" />
-
-                <ImageView
-                    android:id="@+id/imgCombo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_16sdp"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:layout_marginBottom="@dimen/_8sdp"
-                    android:src="@drawable/ic_normal_combo_placeholder"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/txtNormalComboTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:textColor="@color/text_black"
-                    android:textSize="@dimen/_14sdp"
-                    app:layout_constraintStart_toEndOf="@id/imgCombo"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:text="@string/normal_combo_title" />
-
-                <TextView
-                    android:id="@+id/txtNormalComboDescr"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:text="@string/normal_combo_title"
-                    android:textColor="@color/text_grey_1"
-                    android:textSize="@dimen/_9sdp"
-                    app:layout_constraintStart_toEndOf="@id/imgCombo"
-                    app:layout_constraintTop_toBottomOf="@id/txtNormalComboTitle" />
-
-                <TextView
-                    android:id="@+id/txtNormalComboPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:textColor="@color/text_red"
-                    android:textSize="@dimen/_14sdp"
-                    app:layout_constraintStart_toEndOf="@id/imgCombo"
-                    app:layout_constraintTop_toBottomOf="@id/txtNormalComboDescr"
-                    tools:text="1.000.000" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="#ECFAF2"
-            app:cardCornerRadius="@dimen/_8sdp"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardCombo1">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="#ECFAF2">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/comboContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/txtOrderNumber"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_16sdp"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:text="@string/normal_combo_title"
-                        android:textColor="@color/text_black"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="Đơn hàng #1" />
-
-                    <ImageView
-                        android:id="@+id/imgCombo1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/_16sdp"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:layout_marginBottom="@dimen/_8sdp"
-                        android:src="@drawable/ic_normal_combo_placeholder"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/txtOrderNumber" />
-
-                    <TextView
-                        android:id="@+id/txtNormalComboTitle1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:textColor="@color/text_black"
-                        android:textSize="@dimen/_14sdp"
-                        app:layout_constraintStart_toEndOf="@id/imgCombo1"
-                        app:layout_constraintTop_toBottomOf="@id/txtOrderNumber"
-                        tools:text="@string/normal_combo_title" />
-
-                    <TextView
-                        android:id="@+id/txtNormalComboDescr1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:text="@string/normal_combo_title"
-                        android:textColor="@color/text_grey_1"
-                        android:textSize="@dimen/_9sdp"
-                        app:layout_constraintStart_toEndOf="@id/imgCombo1"
-                        app:layout_constraintTop_toBottomOf="@id/txtNormalComboTitle1" />
-
-                    <TextView
-                        android:id="@+id/txtNormalComboPrice1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:textColor="@color/text_red"
-                        android:textSize="@dimen/_14sdp"
-                        app:layout_constraintStart_toEndOf="@id/imgCombo1"
-                        app:layout_constraintTop_toBottomOf="@id/txtNormalComboDescr1"
-                        tools:text="1.000.000" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:background="@color/status_wait_to_accept"
-                    android:gravity="center"
-                    android:textColor="@color/text_white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:padding="@dimen/_6sdp"
-                    app:layout_constraintTop_toBottomOf="@id/comboContainer"
-                    tools:text="@string/text_wait_to_accept" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
+            app:layout_constraintTop_toBottomOf="@+id/txtQuestion" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -11,7 +11,7 @@ import androidx.core.text.toSpannable
 
 object ComboListSdk {
 
-    enum class STATUS{
+    enum class ORDER_STATUS {
         WAIT_ACCEPT,
         WAIT_DELIVERY,
         PAY_LATE,
@@ -44,6 +44,23 @@ object ComboListSdk {
                 setSpan(UnderlineSpan(), 0, prefix.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
             }
             return SpannableStringBuilder(displayPrefix).append(displaySuffix).toSpannable()
+        }
+
+        @JvmStatic
+        fun getOrderStatusColor(context: Context, orderStatus: ORDER_STATUS): Int {
+            return when (orderStatus) {
+                ORDER_STATUS.WAIT_ACCEPT -> ContextCompat.getColor(
+                    context,
+                    R.color.status_wait_to_accept
+                )
+                ORDER_STATUS.WAIT_DELIVERY -> ContextCompat.getColor(
+                    context,
+                    R.color.status_wait_to_delivery
+                )
+                ORDER_STATUS.PAY_LATE -> ContextCompat.getColor(context, R.color.status_pay_later)
+                ORDER_STATUS.WAIT_PAY -> ContextCompat.getColor(context, R.color.status_wait_to_pay)
+                else -> ContextCompat.getColor(context, R.color.status_received)
+            }
         }
 
     }

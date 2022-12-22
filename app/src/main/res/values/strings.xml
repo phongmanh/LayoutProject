@@ -8,4 +8,10 @@
     <string name="combo_list_verify_text">XÁC THỰC ĐÓ LÀ BẠN</string>
     <string name="normal_combo_title">Gói cơ bản</string>
     <string name="text_wait_to_accept">CHỜ XÁC NHẬN</string>
+    <string name="item_details_edit_label"><u>Chỉnh sửa</u></string>
+    <string name="item_details_choose_period_label">Chọn thời hạn</string>
+    <string name="item_details_choose_receive_time_label">Số lần nhận</string>
+    <string name="one_month_period">1 Tháng</string>
+    <string name="total_price_label">Tổng tiền</string>
+    <string name="place_order_label">Đặt hàng</string>
 </resources>
