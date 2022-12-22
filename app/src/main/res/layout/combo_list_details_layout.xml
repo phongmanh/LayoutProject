@@ -22,9 +22,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ScrollView
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/cardTotal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar">
@@ -33,7 +35,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_16sdp"
-                android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginEnd="@dimen/_16sdp"
                 android:orientation="vertical">
 
@@ -41,9 +42,8 @@
                     android:id="@+id/rvItems"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:itemCount="1"
+                    tools:itemCount="5"
                     tools:listitem="@layout/item_details_card_layout" />
-
 
                 <TextView
                     android:id="@+id/txtPeriod"
@@ -61,7 +61,8 @@
                     android:id="@+id/radGroupPeriod"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp">
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
 
                     <RadioButton
                         android:id="@+id/radOneMonthPeriod"
@@ -71,8 +72,18 @@
                         android:background="@drawable/radio_button_background"
                         android:checked="true"
                         android:text="@string/one_month_period" />
-                </RadioGroup>
 
+                    <RadioButton
+                        android:id="@+id/radThreeMonthPeriod"
+                        style="@style/AppRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/radio_button_background"
+                        android:checked="true"
+                        android:text="@string/three_month_period" />
+
+                </RadioGroup>
 
                 <TextView
                     android:id="@+id/txtReceiveTime"
@@ -91,6 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
                     android:orientation="horizontal">
 
                     <RadioButton
@@ -121,16 +133,31 @@
                         tools:text="3 lần" />
                 </RadioGroup>
 
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tvReceiveDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_date_picker"
+                        android:hint="@string/receive_date_hint"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
-        </ScrollView>
+        </androidx.core.widget.NestedScrollView>
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardTotal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@android:color/transparent"
             app:cardElevation="@dimen/_10sdp"
             app:cardMaxElevation="@dimen/_12sdp"
             app:cardPreventCornerOverlap="true"
