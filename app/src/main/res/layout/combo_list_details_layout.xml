@@ -59,7 +59,7 @@
 
                 <RadioGroup
                     android:id="@+id/radGroupPeriod"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:orientation="horizontal">
@@ -67,7 +67,8 @@
                     <RadioButton
                         android:id="@+id/radOneMonthPeriod"
                         style="@style/AppRadioButton"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="@dimen/_30sdp"
                         android:background="@drawable/radio_button_background"
                         android:checked="true"
@@ -76,7 +77,8 @@
                     <RadioButton
                         android:id="@+id/radThreeMonthPeriod"
                         style="@style/AppRadioButton"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="@dimen/_30sdp"
                         android:layout_marginStart="@dimen/_10sdp"
                         android:background="@drawable/radio_button_background"
@@ -99,7 +101,7 @@
 
                 <RadioGroup
                     android:id="@+id/radGroupReceiveTime"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:layout_marginBottom="@dimen/_16sdp"
@@ -107,28 +109,28 @@
 
                     <RadioButton
                         style="@style/AppRadioButton"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="@dimen/_30sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:background="@drawable/radio_button_background"
                         android:checked="true"
                         tools:text="1 lần" />
 
                     <RadioButton
                         style="@style/AppRadioButton"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="@dimen/_30sdp"
                         android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:background="@drawable/radio_button_background"
                         tools:text="2 lần" />
 
                     <RadioButton
                         style="@style/AppRadioButton"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="@dimen/_30sdp"
                         android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
                         android:background="@drawable/radio_button_background"
                         tools:text="3 lần" />
                 </RadioGroup>
@@ -145,7 +147,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableEnd="@drawable/ic_date_picker"
-                        android:hint="@string/receive_date_hint"/>
+                        android:hint="@string/receive_date_hint" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 

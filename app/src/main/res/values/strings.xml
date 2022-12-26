@@ -16,4 +16,8 @@
     <string name="total_price_label">Tổng tiền</string>
     <string name="place_order_label">Đặt hàng</string>
     <string name="receive_date_hint">Nhập ngày nhận hàng</string>
+    <string name="complete_text">Hoàn thành</string>
+    <string name="verify_popup_title">Xác thực bản thân</string>
+    <string name="accepted_text">Xác nhận</string>
+    <string name="verify_popup_description">Bạn cần phải chụp CCCD để chúng tôi xác thực danh tính của bạn.</string>
 </resources>
