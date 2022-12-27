@@ -66,22 +66,18 @@
 
                     <RadioButton
                         android:id="@+id/radOneMonthPeriod"
-                        style="@style/AppRadioButton"
+                        style="@style/AppRadioButtonPrimary"
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_height="@dimen/_30sdp"
-                        android:background="@drawable/radio_button_background"
                         android:checked="true"
                         android:text="@string/one_month_period" />
 
                     <RadioButton
                         android:id="@+id/radThreeMonthPeriod"
-                        style="@style/AppRadioButton"
+                        style="@style/AppRadioButtonPrimary"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="@dimen/_30sdp"
                         android:layout_marginStart="@dimen/_10sdp"
-                        android:background="@drawable/radio_button_background"
+                        android:layout_weight="1"
                         android:checked="true"
                         android:text="@string/three_month_period" />
 
@@ -108,30 +104,24 @@
                     android:orientation="horizontal">
 
                     <RadioButton
-                        style="@style/AppRadioButton"
+                        style="@style/AppRadioButtonPrimary"
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_height="@dimen/_30sdp"
-                        android:background="@drawable/radio_button_background"
                         android:checked="true"
                         tools:text="1 lần" />
 
                     <RadioButton
-                        style="@style/AppRadioButton"
+                        style="@style/AppRadioButtonPrimary"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="@dimen/_30sdp"
                         android:layout_marginStart="@dimen/_10sdp"
-                        android:background="@drawable/radio_button_background"
+                        android:layout_weight="1"
                         tools:text="2 lần" />
 
                     <RadioButton
-                        style="@style/AppRadioButton"
+                        style="@style/AppRadioButtonPrimary"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="@dimen/_30sdp"
                         android:layout_marginStart="@dimen/_10sdp"
-                        android:background="@drawable/radio_button_background"
+                        android:layout_weight="1"
                         tools:text="3 lần" />
                 </RadioGroup>
 

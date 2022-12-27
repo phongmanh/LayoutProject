@@ -1,23 +1,56 @@
 <resources>
     <string name="app_name">LayoutProject</string>
 
+
+    <!--====================General area==============================-->
+    <string name="yes_label">Có</string>
+    <string name="no_label">Không</string>
+    <string name="complete_label">Hoàn thành</string>
+    <string name="accepted_label">Xác nhận</string>
+    <string name="phone_number_label">Số điện thoại</string>
+    <string name="job_label">Nghề nghiệp</string>
+    <string name="total_label">Tổng cộng</string>
+
+
     <string name="splash_logo_text">ndt</string>
     <string name="splash_slogan">Cho cuộc sống tốt đẹp hơn</string>
     <string name="combo_list_message">CHÚNG TÔI MANG ĐIỀU TỐT ĐẸP ĐẾN CHO MỌI NGƯỜI</string>
     <string name="combo_list_question">BẠN ĐÃ THAM GIA VỚI CHÚNG TÔI?</string>
     <string name="combo_list_verify_text">XÁC THỰC ĐÓ LÀ BẠN</string>
     <string name="normal_combo_title">Gói cơ bản</string>
-    <string name="text_wait_to_accept">CHỜ XÁC NHẬN</string>
     <string name="item_details_edit_label"><u>Chỉnh sửa</u></string>
     <string name="item_details_choose_period_label">Chọn thời hạn</string>
     <string name="item_details_choose_receive_time_label">Số lần nhận</string>
+
+    <!--====================Order Status area==============================-->
+    <string name="text_wait_to_accept">CHỜ XÁC NHẬN</string>
+    <string name="text_wait_to_delivery">CHỜ GIAO HÀNG</string>
+    <string name="text_pay_late">CHẬM THANH TOÁN</string>
+    <string name="text_received">ĐÃ NHẬN HÀNG</string>
+    <string name="text_wait_to_pay">CHỜ THANH TOÁN</string>
+
     <string name="one_month_period">1 Tháng</string>
     <string name="three_month_period">3 Tháng</string>
+    <string name="combo_duration">%s Tháng</string>
+    <string name="combo_receive_times_number">%s Lần</string>
+
+    <!--====================Button text area==============================-->
     <string name="total_price_label">Tổng tiền</string>
     <string name="place_order_label">Đặt hàng</string>
-    <string name="receive_date_hint">Nhập ngày nhận hàng</string>
-    <string name="complete_text">Hoàn thành</string>
+
+
     <string name="verify_popup_title">Xác thực bản thân</string>
-    <string name="accepted_text">Xác nhận</string>
     <string name="verify_popup_description">Bạn cần phải chụp CCCD để chúng tôi xác thực danh tính của bạn.</string>
+    <string name="receive_address_popup_title">Chọn địa điểm nhận hàng</string>
+
+    <!--====================Hint area==============================-->
+    <string name="job_spinner_hint">Chọn nghề hiện tại</string>
+    <string name="phone_number_hint">Nhập số điện thoại của bạn</string>
+
+
+    <string name="receive_date_hint">Nhập ngày nhận hàng</string>
+    <string name="receive_method">Phương thức nhận hàng</string>
+    <string name="receive_directly">Nhận trực tiếp</string>
+    <string name="receive_delivery">Giao hàng</string>
+
 </resources>

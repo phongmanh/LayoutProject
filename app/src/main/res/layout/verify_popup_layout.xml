@@ -55,7 +55,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnAccept"
-                style="@style/AppButton"
+                style="@style/AppButtonPrimary"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_16sdp"
