@@ -23,6 +23,8 @@
         <entry key="app/src/main/res/layout/item_details_card_layout.xml" value="0.375" />
         <entry key="app/src/main/res/layout/item_selector_layout.xml" value="0.335" />
         <entry key="app/src/main/res/layout/order_details_card_layout.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/order_details_status.xml" value="0.4270833333333333" />
+        <entry key="app/src/main/res/layout/order_details_status_layout.xml" value="0.335" />
         <entry key="app/src/main/res/layout/receipt_address_popup_layout.xml" value="0.3182291666666667" />
         <entry key="app/src/main/res/layout/splash_layout.xml" value="0.3182291666666667" />
         <entry key="app/src/main/res/layout/toolbar_layout.xml" value="0.3182291666666667" />

@@ -10,6 +10,7 @@
     <string name="phone_number_label">Số điện thoại</string>
     <string name="job_label">Nghề nghiệp</string>
     <string name="total_label">Tổng cộng</string>
+    <string name="pay_label">Thang toán</string>
 
 
     <string name="splash_logo_text">ndt</string>

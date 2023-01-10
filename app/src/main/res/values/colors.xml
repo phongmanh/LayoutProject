@@ -14,6 +14,7 @@
     <color name="text_black">@color/colorBlack</color>
     <color name="text_white">@color/colorWhite</color>
     <color name="text_green">@color/colorPrimary</color>
+    <color name="txt_blue">#1D8ECE</color>
     <color name="text_red">#FF4600</color>
     <color name="text_grey_1">#828282</color>
     <color name="text_grey_2">#4F4F4F</color>
